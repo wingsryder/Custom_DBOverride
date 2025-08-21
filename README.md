@@ -3,7 +3,7 @@
 ---
 
 **⚠️ Disclaimer:**  
-**Use this module at your own risk in production. Versions higher than MariaDB 10.4 have no official support.**  
+**Use this module at your own risk in production.**  
 This module only bypasses validation, it does not add guaranteed compatibility.
 
 ---
@@ -28,8 +28,21 @@ Older Magento 2.4.x releases hard-code a supported MariaDB range of 10.2–10.4.
 
 When downgrading MariaDB isn’t possible, this module spoofs the detected DB version and short-circuits the installer validation so you can keep operating until you upgrade Magento to a version that officially supports 10.5/10.6.
 
+**Use this module primarily for 2.4.0–2.4.3-p3 when stuck on MariaDB 10.5+.**
+
 ---
 
+## What it does not do
+
+It does not change your actual database or SQL behavior.
+
+It does not add features or performance optimizations.
+
+It does not make unsupported combinations magically safe—you must test your store.
+
+It is not needed (and not recommended) on newer Magento that already support MariaDB 10.5/10.6.
+
+---
 ## Installation
 
 1. Copy the module into `app/code/Custom/DBOverride/` (look like this structure)
